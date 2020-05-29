@@ -7,4 +7,6 @@
   - name: BACK UP CONFIG 
     ios_config:
       backup: yes
+      backup_options:
+        dir_path: /home/tenfour/
       
