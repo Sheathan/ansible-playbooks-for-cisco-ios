@@ -1,5 +1,5 @@
 ---
-- hosts: ios
+- hosts: 360-Switches
   gather_facts: no
 
 
