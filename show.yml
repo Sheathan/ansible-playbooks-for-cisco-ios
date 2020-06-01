@@ -6,4 +6,4 @@
   tasks:
   - name: Running command show {{ run_command }}
     ios_command:
-      commands: show "{{ run_command }}"
+      commands: "show {{ run_command }}"
