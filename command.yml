@@ -4,6 +4,6 @@
     run_command: "{{ run_command }}"
 
   tasks:
-  - name: run show version on remote devices
+  - name: run custom command
     ios_command:
       commands: "{{ run_command }}"
