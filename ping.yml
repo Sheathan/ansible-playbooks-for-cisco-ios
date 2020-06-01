@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    run_command: "{{ run_command }}"
+
+  tasks:
+  - name: Running command ping {{ run_command }}
+    ios_command:
+      commands: ping "{{ run_command }}"
