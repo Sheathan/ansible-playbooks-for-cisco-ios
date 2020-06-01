@@ -2,9 +2,7 @@
 - hosts: all
   vars:
     run_command: "{{ run_command }}"
-    hosts_variable: "{{ hosts_variable }}"
    
-- hosts: "{{ hosts_variable }}"
   tasks:
   - name: Running command show {{ run_command }}
     ios_command:
