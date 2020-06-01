@@ -1,5 +1,5 @@
 ---
-- hosts: {{ hosts_variable }}
+- hosts: "{{ hosts_variable }}"
   vars:
     run_command: "{{ run_command }}"
     hosts_variable: "{{ hosts_variable }}"
