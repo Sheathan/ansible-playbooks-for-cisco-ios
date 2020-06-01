@@ -6,4 +6,4 @@
   tasks:
   - name: Running command traceroute {{ run_command }}
     ios_command:
-      commands: traceroute "{{ run_command }}"
+      commands: "traceroute {{ run_command }}"
