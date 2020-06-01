@@ -2,8 +2,18 @@
 - hosts: all
   vars:
     run_command: "{{ run_command }}"
+    show_command: "{{ show_command }}"
+    ping_command: "{{ ping_command }}"
+    trace_command: "{{ trace_command }}"
 
   tasks:
   - name: Running command {{ run_command }}
     ios_command:
-      commands: "{{ run_command }}"
+      commands: show "{{ show_command }}"
+      when: show_command == "show"
+    ios_command:
+      commands: ping "{{ ping_command }}"
+      when: ping_command == "ping"
+    ios_command:
+      commands: traceroute "{{ trace_command }}"
+      when: trace_command == "traceroute"
