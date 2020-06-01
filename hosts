@@ -1,9 +1,13 @@
-[ios]
-192.168.161.9  ansible_host=192.168.161.9  
+[test1]
+test1
 
-[ios:vars]
+[test1:vars]
+ansible_connection: network_cli
+ansible_network_os: ios
 
-ansible_ssh_pass=cisco
-ansible_user=pi
-ansible_network_os=ios
-ansible_connection=network_cli
+[test2]
+test2
+
+[test2:vars]
+ansible_connection: network_cli
+ansible_network_os: ios
