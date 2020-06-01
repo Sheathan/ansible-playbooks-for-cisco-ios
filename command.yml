@@ -4,6 +4,6 @@
     run_command: "{{ run_command }}"
 
   tasks:
-  - name: run custom command
+  - name: Running command {{ run_command }}
     ios_command:
       commands: "{{ run_command }}"
