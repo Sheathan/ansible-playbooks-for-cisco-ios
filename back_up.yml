@@ -1,5 +1,5 @@
 ---
-- hosts: 360-Switches
+- hosts: all
   gather_facts: no
 
 
