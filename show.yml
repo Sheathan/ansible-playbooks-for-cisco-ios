@@ -1,7 +1,8 @@
 ---
-- hosts: all
+- hosts: {{ hosts_variable }}
   vars:
     run_command: "{{ run_command }}"
+    hosts_variable: "{{ hosts_variable }}"
 
   tasks:
   - name: Running command show {{ run_command }}
