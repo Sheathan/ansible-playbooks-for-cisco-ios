@@ -6,4 +6,4 @@
   tasks:
   - name: Running command ping {{ run_command }}
     ios_command:
-      commands: ping "{{ run_command }}"
+      commands: "ping {{ run_command }}"
