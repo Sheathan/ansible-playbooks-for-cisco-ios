@@ -12,3 +12,5 @@
         - command: 'copy ftp://{{ username }}:{{ password }}@10.202.10.184/tftp/{{ filename }} flash:{{ filename }}'
           prompt: 'Destination filename \[{{ filename }}\]?'
           answer: '{{ filename }}'
+          prompt: 'Do you want to over write? \[confirm\]'
+          answer: "\r"
