@@ -2,11 +2,13 @@
 - hosts: all
   vars:
     filename: "{{ filename }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
     
   tasks:
-  - name: run commands that require answering a prompt
+  - name: Copy a file from FTP to the router flash, prompt for all credentials
     ios_command:
       commands:
-        - command: 'copy ftp://tenfour:123security@10.202.10.184/tftp/{{ filename }} flash:{{ filename }}'
+        - command: 'copy ftp://{{ username }}:{{ password }}@10.202.10.184/tftp/{{ filename }} flash:{{ filename }}'
           prompt: 'Destination filename \[{{ filename }}\]?'
           answer: '{{ filename }}'
