@@ -1,9 +1,12 @@
 ---
 - hosts: all
+  vars:
+    filename: "{{ filename }}"
+    
   tasks:
   - name: run commands that require answering a prompt
     ios_command:
       commands:
-        - command: 'copy ftp://tenfour:123security@10.202.10.184/tftp/test.py flash:test'
-          prompt: 'Destination filename \[test\]?'
-          answer: 'test.py'
+        - command: 'copy ftp://tenfour:123security@10.202.10.184/tftp/{{ filename }} flash:{{ filename }}'
+          prompt: 'Destination filename \[{{ filename }}\]?'
+          answer: '{{ filename }}'
